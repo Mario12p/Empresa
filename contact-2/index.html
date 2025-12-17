@@ -664,20 +664,91 @@ body button.search-submit.nv-submit {background-color: var(--e-global-color-prim
   }
 </style>
 
-<form action="https://formsubmit.co/artesaniasvariedadesembajada@gmail.com" method="POST">
+<style>
+  /* Contenedor del formulario */
+  .contact-form {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  .contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 
-  <input type="email" name="email" placeholder="Tu correo" required>
+  /* Estilo de los campos de entrada */
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+  }
 
-  <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+  /* Efecto al hacer clic en un campo */
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  }
 
-  <!-- Opcionales -->
-  <input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
-  <input type="hidden" name="_captcha" value="false">
+  /* Ajuste para el área de texto */
+  .contact-form textarea {
+    height: 120px;
+    resize: vertical; /* Permite al usuario agrandarlo hacia abajo */
+  }
 
-  <button type="submit">Enviar mensaje</button>
-</form>
+  /* Estilo del botón */
+  .contact-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .contact-form button[type="submit"]:active {
+    transform: scale(0.98);
+  }
+</style>
+
+<div class="contact-form">
+  <h2>Envíanos un mensaje</h2>
+  <form action="https://formsubmit.co/artesaniasvariedadesembajada@gmail.com" method="POST">
+    
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    
+    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+    
+    <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde Artesanías Variedades">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table"> <button type="submit">Enviar mensaje</button>
+  </form>
+</div>
 		</div>
 				</div>
 				<div class="elementor-element elementor-element-3c625653 elementor-widget__width-inherit elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="3c625653" data-element_type="widget" data-widget_type="divider.default">
